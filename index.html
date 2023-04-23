@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="./main.js"></script>
     <title>Mobile First</title>
 </head>
 <body>
@@ -28,31 +29,49 @@
             </div>
             <section class="main-tables-container">
                 <div class="main-currency-table">
-                    <p class="currency-table..title">Monedas</p>
+                    <p class="currency-table__title">Monedas</p>
                     <div class="currency-table--container">
                         <table>
                             <tr>
                                 <td class="table__top-left">Bitcoin</td>
-                                <td class="table__top-right table__right">$1.96 <span></span></td>
+                                <td class="table__top-right table__right"><span id="table__bitcoin"></span> <span></span></td>
                             </tr>
                             <tr>
                                 <td>Ethereum</td>
-                                <td class="table__right">$0.07 <span></span></td>
+                                <td class="table__right"> <span id="table__ethereum"></span> <span></span></td>
                             </tr>
                             <tr>
-                                <td>Ripple</td>
-                                <td class="table__right">$2.17 <span></span></td>
+                                <td>Solana</td>
+                                <td class="table__right"><span id="table__solana"></span> <span></span></td>
                             </tr>
                             <tr>
                                 <td class="table__bottom-left">stellar</td>
-                                <td class="table__right table__bottom-right">4.96 <span></span></td>
+                                <td class="table__right table__bottom-right"> <span id="table__stellar"></span> <span></span></td>
                             </tr>
                         </table>
                     </div>
                     <div class="currency-table--date">
-                        <p> <b>Actualizado:</b> 19 de julio</p>
+                        <p> <b>Actualizado: </b><span class="current-date"></span></span></p>
                     </div>
                 </div>
+
+                <div class="main-commission-table">
+                    <p class="commission-table__title">Comisiones</p>
+                    <div class="commission-table--container">
+                        <div class="div1"> <p>Bitrade</p> </div>
+                        <div class="div2"> <p>$ 12.96</p> </div>
+                        <div class="div3"> <p>Bitpreco</p> </div>
+                        <div class="div4"> <p>$ 13.07</p> </div>
+                        <div class="div5"> <p>Novadax</p> </div>
+                        <div class="div6"> <p>$ 13.15</p> </div>
+                        <div class="div7"> <p>Coinext</p> </div>
+                        <div class="div8"> <p>$ 14.96</p> </div>
+                    </div>
+                    <div class="commission-table--date">
+                        <p> <b>Actualizado: </b><span class="current-date"></span></span></p>
+                    </div>
+                </div>
+
             </section>
         </section>
         <section></section>
