@@ -197,7 +197,6 @@ main{
     margin-right: 10px;
     right: calc(100%);
     top: calc(50% - 8px);
-    transform: scaleX(-1);
     background-image: url('./assets/icons/left-arrow.svg');
     background-size: cover;
     background-position: center;
@@ -296,6 +295,7 @@ main{
 }
 
 .commission-table--container {
+    position: relative;
     width: 90%;
     min-width: 230px;
     max-width: 300px;
@@ -349,7 +349,7 @@ main{
     min-width: 320px;
     height: auto;
     padding: 20px 10px;
-    background-color: var(--warm-black);
+    background-color: var(--black);
 }
 
 .product-detail--batata-logo{
@@ -385,3 +385,62 @@ main{
     line-height: 1.8rem;
     color: #808080;
 }
+
+ .product-detail--card{
+    width: 90%;
+    min-width: 288px;
+    max-width: 400px;
+    min-height: 150px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--warm-black);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+ }
+
+ .product-detail--card .product-detail--icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+
+ .clock{
+    background-image: url('./assets/icons/clock.svg');
+
+ }
+
+ .eye{
+    background-image: url('./assets/icons/eye.svg');
+
+ }
+
+ .dollar{
+    background-image: url('./assets/icons/dollar-sign.svg');
+
+ }
+
+ .check{
+    background-image: url('./assets/icons/check-circle.svg');
+
+ }
+
+ .product--card-title{
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--just-white);
+ }
+
+ .product--card-doby {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+}
+
+/*seccion comodin*/
