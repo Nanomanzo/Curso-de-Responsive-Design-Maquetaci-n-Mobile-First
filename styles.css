@@ -168,11 +168,44 @@ main{
 }
 
 .currency-table--container{
+    position: relative;
     width: 90%;
     min-width: 230px;
     max-width: 300px;
     height: 250px;
     margin: 0 auto;
+}
+
+.arrow-right{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    left: calc(100%);
+    top: calc(50% - 8px);
+    background-image: url('./assets/icons/right-arrow.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.arrow-left{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    right: calc(100%);
+    top: calc(50% - 8px);
+    transform: scaleX(-1);
+    background-image: url('./assets/icons/left-arrow.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.desactive{
+    display: none;
 }
 
 .currency-table--container table{
@@ -325,7 +358,7 @@ main{
     height: 25px;
     left: calc(50% - 20px);
     top: calc(0% - 12.5px);
-    background-image: url(./assets/icons/batata.svg);
+    background-image: url('./assets/icons/batata.svg');
 }
 
 .product-detail--title{
