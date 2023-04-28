@@ -63,22 +63,36 @@ fetch(`https://api.coingecko.com/api/v3/coins/${cryptoId}/market_chart?vs_curren
 /* slider de tabla de moneda y tabla de Comisiones */
 
 $(document).ready(function() {
-  var currencyTable = $(".main-currency-table")
-  var commissionTable = $(".main-commission-table")
+  var currencyTable = $(".main-currency-table");
+  var commissionTable = $(".main-commission-table");
   var leftArrow = $(".arrow-left");
   var rightArrow = $(".arrow-right");
-
+  
+  function toggleTables() {
+    leftArrow.toggleClass("desactive");
+    commissionTable.toggleClass("desactive");
+    currencyTable.toggleClass("desactive");
+    rightArrow.toggleClass("desactive");
+  }
+  
+  function resizeHandler() {
+    if ($(window).width() < 930) {
+      toggleTables();
+    } else {
+      leftArrow.removeClass("desactive");
+      rightArrow.removeClass("desactive");
+      currencyTable.removeClass("desactive");
+      commissionTable.removeClass("desactive");
+    }
+  }
+  
+  $(window).on("load resize", resizeHandler);
+  
   leftArrow.click(function() {
-    leftArrow.addClass("desactive");
-    commissionTable.addClass("desactive");
-    currencyTable.removeClass("desactive");
-    rightArrow.removeClass("desactive");
+    toggleTables();
   });
-
+  
   rightArrow.click(function() {
-    rightArrow.addClass("desactive");
-    currencyTable.addClass("desactive");
-    commissionTable.removeClass("desactive");
-    leftArrow.removeClass("desactive");
+    toggleTables();
   });
 });
